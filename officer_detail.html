@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DETAILS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="/">Home</a></li>
+      <li ><a href="/enquiry">Send an Enquiry</a></li>
+      <li><a href="#">Dashboard</a></li>
+       <li><a href="/map">Map</a></li>
+       <li><a href="/user_login">Logout</a></li>
+    
+    </ul>
+  </div>
+</nav>
+<center>
+<h2>
+Details about Officers <br> </center>
+<div class="BOX_BODY">
+<table id="Details" class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>NAME</th>
+      <th>DESIGNATION</th>
+      <th>OFFICE ADDRESS</th>
+      <th>CITY</th>
+      <th>AREA</th>
+      <th>MAIL ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in add_officer %}
+    <tr>
+      <td><strong>{{ i.Name }}</strong></td>
+      <td>{{i.Designation}}</td>
+      <td>{{i.Office_address}}</td>
+      <td>{{i.City}}</td>
+      <td>{{i.Area}}</td>
+      <td>{{i.Mail_id}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+</body>
+</html>

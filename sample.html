@@ -1,0 +1,71 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>AYUSH educational funds</title>
+  <meta name="description" content="Description of your site goes here">
+  <meta name="keywords" content="keyword1, keyword2, keyword3">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="main-out">
+<div class="main">
+<div class="page">
+<div class="top">
+<div class="header">
+<div class="header-top">
+<h1><span>MINISTRY OF AYUSH</span></h1>
+<p>Call_Us: 1827 6432 8765</p>
+</div>
+<div class="topmenu">
+<ul>
+  {% with name=session.regno %}
+  <li><a href="/">Home</a></li>
+  <li><a href="/notification/{{name}}">Notification</a></li>
+  <li><a href="/project_proposal">Project&nbsp;Proposal</a></li>
+  <li><a href="/report">Report</a></li>
+  <li><a href="/feedback">Feedback</a></li>
+  <li><a href="/">Logout</a></li>
+  {% endwith %}</ul>
+</div>
+<div class="header2-img"> 
+</div>
+</div>
+<div class="content">
+{% for i in project_proposal %}
+{% with no=i.status %}
+{% if no==0 %}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <h4>congrats! Your project is accepted. project id is <strong>{{i.proj_id}}</strong> </h4>
+</div>
+{% endif %}
+{% endwith %}
+
+
+{% endfor %}
+
+
+	
+</div>
+</div>
+<div class="bottom">
+<ul>
+  <li style="border-left: medium none;"><a href="index.html">Home</a></li>
+  <li><a href="http://ayush.gov.in/">About&nbsp;Us</a></li>
+  <li><a href="http://www.ndtv.com/topic/ministry-of-ayush">What's&nbsp;New</a></li>
+  <li><a href="http://ayush.gov.in/contact-us">Contact&nbsp;us</a></li>
+  <li><a href="https://www.nhp.gov.in/UploadFiles/microsite/635665058281132058_1.pdf">Institutions</a></li>
+    <li><a href="/feedback">Feedback</a></li>
+</ul>
+</div>
+<!--DO NOT Remove The Footer Links-->
+<p> </p>
+</div>
+<!--DO NOT Remove The  Links-->
+</div>
+</div>
+</div>
+</body>
+</html>

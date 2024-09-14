@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>USER SELECTION</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  * {
+  .border-radius(0) !important;
+}
+
+#field {
+    margin-bottom:20px;
+}
+</style>
+<!--<script>
+$(document).ready(function(){
+    var next = 1;
+    $(".add-more").click(function(e){
+        e.preventDefault();
+        var addto = "#field" + next;
+        var addRemove = "#field" + (next);
+        next = next + 1;
+        
+        var newIn = '<select class="input form-control pdi-spacing-02" id="field1" name="prof1">'
+        
+        var newIn = '<select autocomplete="off" class="input form-control" id="field' + next + '" name="field' + next + '" type="text"><option>Please Select...</option><option>Option 1</option><option>Option 2</option><option>Option 3</option><option>Option 4</option></select>';
+        // var newIn = '<input autocomplete="off" class="input form-control" id="field' + next + '" name="field' + next + '" type="text">';
+        var newInput = $(newIn);
+        var removeBtn = '<button id="remove' + (next - 1) + '" class="btn btn-danger remove-me" >-</button></div><div id="field">';
+        var removeButton = $(removeBtn);
+        $(addto).after(newInput);
+        $(addRemove).after(removeButton);
+        $("#field" + next).attr('data-source',$(addto).attr('data-source'));
+        $("#count").val(next);  
+        
+            $('.remove-me').click(function(e){
+                e.preventDefault();
+                var fieldNum = this.id.charAt(this.id.length-1);
+                var fieldID = "#field" + fieldNum;
+                $(this).remove();
+                $(fieldID).remove();
+            });
+    });
+    
+
+    
+});
+
+</script> -->
+
+ <!-- <script>
+ $(".dropdown-menu li a").click(function(){
+  var selText = $(this).text();
+  $(this).parents('.btn-group').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
+});
+
+$("#btnSearch").click(function(){
+	alert($('.btn-select').text()+", "+$('.btn-select2').text());
+}); </script> -->
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li ><a href="/enquiry">Send an Enquiry</a></li>
+      <li><a href="/dashboard">Dashboard</a></li>
+      <li><a href="/map">Map</a></li>
+      <li><a href="/">Logout</a></li>
+       
+     </ul>
+  </div>
+</nav>
+
+  <!-- Search box Start -->
+  <div class="container">
+<div class="container">
+<div class="container">
+<div class="row" style="margin-top:20px">
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+		<meta charset="UTF-8">
+
+<form action="/login" method="post">
+	
+      <select name="City">
+	  <option value="Coimbatore">Coimbatore</option>
+      <option value="Erode">Erode</option>
+      <option value="Ooty">Ooty</option>
+      <option value="Tirupur">Tirupur</option>
+      </select>
+      <select name="Area">
+	  <option value="Annur">Annur</option>
+      <option value="Saravanampatti">Saravanampatti</option>
+      <option value="Mettupalayam">Mettupalayam</option>
+      <option value="Gandhipuram">Gandhipuram</option>
+      <option value="Sevur">Sevur</option>
+      <option value="Palladam">Palladam</option>
+      <option value="Kothagiri">Kothagiri</option>
+      <option value="Kunnur">Kunnur</option>
+      <option value="Ennore">Ennore</option>
+      <option value="Pasur">Pasur</option>
+      </select> 
+      
+<!-- <div class="container">
+		<input type="hidden" name="City" value="1" />
+		<div class="control-group" id="fields">
+            <label class="control-label" for="field1">SELECT THE CITY</label>
+            <div class="controls" id="profs"> 
+  
+                        
+                    <div class="col-sm-3">
+                        <select class="input form-control pdi-spacing-02" name="City">
+							<option value="0">--SELECT--</option>
+							 <option value="Coimbatore">Coimbatore</option>
+      <option value="Erode">Erode</option>
+      <option value="Ooty">Ooty</option>
+      <option value="Tirupur">Tirupur</option>
+      </select>
+      </div>
+</div>
+</div>
+</div>
+     
+ <div class="container">
+		<input type="hidden" name="Area" value="1" />
+        <div class="control-group" id="fields"> 
+            <label class="control-label" for="field1">SELECT A AREA</label>
+            <div class="controls" id="profs"> 
+  
+                        
+                    <div class="col-sm-3">
+                        <select class="input form-control pdi-spacing-02"  name="Area">
+							<option value="0">--SELECT--</option>
+                                  <option value="Annur">Annur</option>
+      <option value="Saravanampatti">Saravanampatti</option>
+      <option value="Mettupalayam">Mettupalayam</option>
+      <option value="Gandhipuram">Gandhipuram</option>
+      <option value="Sevur">Sevur</option>
+      <option value="Palladam">Palladam</option>
+      <option value="Kothagiri">Kothagiri</option>
+      <option value="Kunnur">Kunnur</option>
+      <option value="Ennore">Ennore</option>
+      <option value="Pasur">Pasur</option>
+      
+                              </select>
+                    </div>
+</div>
+   </div>
+   </div><br> -->
+      <button type="submit" value="search" class="btn btn-primary">OK</button>
+    </div>
+  </div>
+</form>
+
+</div>
+</body>
+</html>

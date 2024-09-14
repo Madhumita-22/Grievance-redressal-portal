@@ -1,0 +1,66 @@
+  <html>
+  <head>
+  <title>ADD OFFICER DETAIL</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    </div>
+    <ul class="nav navbar-nav">
+      <li ><a href="/notification">NOTIFICATION</a></li>
+      <li class="active"><a href="#">ADD AN OFFICER</a></li>
+      <li><a href="/map">Map</a></li>
+      <li><a href="/adminlogin">LOGOUT</a></li>
+    
+    </ul>
+  </div>
+</nav>
+  <div class="container">
+		<div class="row">
+			<div class="panel panel-primary">
+				<div class="panel-body">
+					<form method="POST" action="{{ url_for('add_officer_db')}}">
+						<div class="form-group">
+							<h2>ADD AN OFFICER</h2>
+						</div>
+						
+						<div class="form-group">
+							<label class="control-label" >Name</label>
+							<input name="Name" type="text" maxlength="50" class="form-control">
+						</div>
+						<div class="form-group">
+							<label class="control-label" >Designation</label>
+							<input type="text" name="Designation" type="text" maxlength="100" class="form-control" length="40">
+						</div>
+						<div class="form-group">
+							<label class="control-label">Office Address</label>
+							<input type="text"  name="Office_address" type="address" maxlength="200" class="form-control">
+						</div>
+						<div class="form-group">
+							<label class="control-label">City</label>
+							<input type="text"  name="City" type="text" maxlength="200" class="form-control">
+						</div>
+						<div class="form-group">
+							<label class="control-label">Area</label>
+							<input type="text"  name="Area" type="text" maxlength="200" class="form-control">
+						</div>
+						
+						<div class="form-group">
+							<label class="control-label">Mail Id</label>
+							<input name="Mail_id" type="email" maxlength="50" class="form-control">
+						</div>
+						<div class="col-xs-6 col-sm-6 col-md-6">
+						<div class="col-xs-12 col-md-6"><input type="submit" value="ADD" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+					</div>
+						
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>

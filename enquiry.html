@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ENQUIRY</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="/">Home</a></li>
+      <li ><a href="/input">View details</a></li>
+      <li class="active"> ><a href="enquiry.html">Send an Enquiry</a></li>
+      <li><a href="/dashboard">Dashboard</a></li>
+       <li><a href="/map">Map</a></li>
+       <li><a href="/login">Logout</a></li>
+     
+    </ul>
+  </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-5 col-md-3">
+            <div class="form-login">
+            <h4>ENQUIRY</h4>
+            
+			<form method="post" action="{{ url_for('Enquiry_db')}}">
+             <input type="text" name="Name" class="form-control input-sm chat-input" placeholder="Name" /><br>
+             <input type="text" name="User_Name" class="form-control input-sm chat-input" placeholder="User Name" /><br>
+            <input type="text" name="Mail_id" class="form-control input-sm chat-input" placeholder="Mail id" />
+            <br><input type="text" name="Area" class="form-control input-sm chat-input" placeholder="Area" />
+            <br><input type="text" name="Subject" class="form-control input-sm chat-input" placeholder="Subject" />
+            
+            <br><textarea name="Query" placeholder="Query"></textarea>
+            <br>
+            <div class="wrapper">
+            <span class="group-btn">     
+              <!-- <div class="btn btn-primary btn-md"><input type="submit"> SUBMIT <i class="fa fa-sign-in"></i> -->
+                
+                <div class="col-xs-12 col-md-6"><input type="submit" value="SUBMIT" class="btn btn-primary btn-block btn-lg" tabindex="7"></div> 
+            </span>
+            </div>
+            </div>
+            </div>
+    </div>
+</div>
+</form>
+</body>
+</html>

@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AREA SELECTION</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+/* Credit to bootsnipp.com for the css for the color graph */
+.colorgraph {
+  height: 5px;
+  border-top: 0;
+  background: #ADD8E6;
+  border-radius: 5px;
+/*  background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: -o-linear-gradient(left, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+  background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
+*/}
+</style>
+
+  <script>
+ $(".dropdown-menu li a").click(function(){
+  var selText = $(this).text();
+  $(this).parents('.btn-group').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
+});
+
+$("#btnSearch").click(function(){
+	alert($('.btn-select').text()+", "+$('.btn-select2').text());
+}); </script></head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="/">Home</a></li>
+      <li ><a href="/reply">reply</a></li>
+      <li class="active"><a href="/area_check">Dashboard</a></li>
+       <li><a href="/map">Map</a></li>
+       <li><a href="/authority_login">Logout</a></li>
+    
+    </ul>
+  </div>
+</nav>
+<form action="/area" method="post">
+  <div class="container">
+<div class="container">
+<div class="container">
+<div class="row" style="margin-top:20px">
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+		<meta charset="UTF-8">
+		 <form method="post" action="{{url_for('login_check')}}">
+			<fieldset>
+				<h2>ENTER YOUR AREA</h2>
+				<hr class="colorgraph">
+				<div class="form-group">
+                    <input type="text" name="area" id="area" class="form-control input-lg" placeholder="Your Area">
+				</div>
+		<!--		<span class="button-checkbox">
+					<button type="button" class="btn" data-color="info">Remember Me</button>
+                    <input type="checkbox" name="remember_me" id="remember_me" checked="checked" class="hidden">
+					<a href="" class="btn btn-link pull-right">Forgot Password?</a>
+				</span> -->
+				<hr class="colorgraph">
+				<div class="row">
+				<div class="col-xs-12 col-md-6"><input type="submit" value="OK" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+			</div>
+			</div>
+			</fieldset>
+		</form>
+	</div>
+</div>
+
+</div>
+
+  <!-- Search box Start -->
+
+       <!--  <button type="submit" value="search" class="btn btn-primary">OK</button> -->
+    </div>
+  </div>
+
+<!--Enter the area  -->
+</div>
+</form>
+</body>
+</html>
